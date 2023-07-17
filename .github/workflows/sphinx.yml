@@ -20,7 +20,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install -r docs/requirements.txt  # Si vous utilisez un fichier "requirements.txt" pour définir les dépendances
+        pip install -r requirements.txt  # Si vous utilisez un fichier "requirements.txt" pour définir les dépendances
 
     - name: Build Sphinx
       run: |
