@@ -3,7 +3,7 @@ name: Build Sphinx Documentation 2
 on:
   push:
     branches:
-      - main  # Remplacez "main" par le nom de votre branche principale (ex : master)
+      - master  # Remplacez "main" par le nom de votre branche principale (ex : master)
 
 jobs:
   build:
