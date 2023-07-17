@@ -31,5 +31,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: sphinx-html
-        path: build/html  # Indiquez le chemin vers le répertoire contenant les fichiers HTML générés
+        path: build  # Indiquez le chemin vers le répertoire contenant les fichiers HTML générés
 
