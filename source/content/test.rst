@@ -8,8 +8,7 @@ Le code du fichier sphinx.yml
 
 On fait une petite modif pour voir si ça commit bien ! Encore un peu plus.
 
-.. code-block::
-   :language: yaml
+.. code-block:: yaml
    
    name: Sphinx Documentation
 
