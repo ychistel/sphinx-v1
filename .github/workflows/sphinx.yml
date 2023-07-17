@@ -24,12 +24,12 @@ jobs:
 
     - name: Build Sphinx
       run: |
-        cd source  # Assurez-vous que le chemin est correct pour accéder au répertoire "docs"
-        make html  # Exécutez la commande pour générer la documentation HTML avec Sphinx
+        sphinx-build -b html source build
 
-    - name: Publish HTML pages
-      uses: actions/upload-artifact@v2
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        name: sphinx-html
-        path: build  # Indiquez le chemin vers le répertoire contenant les fichiers HTML générés
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: github-pages
+        publish_dir: ./build
 
