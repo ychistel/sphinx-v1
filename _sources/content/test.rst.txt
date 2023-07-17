@@ -6,42 +6,47 @@ Premier workflow
 
 Le code du fichier sphinx.yml
 
+On fait une petite modif pour voir si ça commit bien !
+
 .. code-block::
    :language: yaml
    
    name: Sphinx Documentation
 
    on:
-     push:
-       branches:
-       - main
+      push:
+         branches:
+            - main
 
-    jobs:
-    deploy:
-        runs-on: ubuntu-latest
+   jobs:
+   deploy:
+      runs-on: ubuntu-latest
 
-        steps:
-        - name: Checkout repository
+      steps:
+      - name: Checkout repository
             uses: actions/checkout@v2
 
-        - name: Set up Python
+      - name: Set up Python
             uses: actions/setup-python@v2
             with:
             python-version: 3.x
 
-        - name: Install dependencies
+      - name: Install dependencies
             run: |
             python -m pip install --upgrade pip
             pip install -r requirements.txt
 
-        - name: Build documentation
+      - name: Build documentation
             run: |
             sphinx-build -b html source build
 
-        - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
             uses: peaceiris/actions-gh-pages@v3
             if: github.ref == 'refs/heads/main'
             with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             publish_branch: github-pages
             publish_dir: ./build
+
+Voila fin du fichier yaml
+
