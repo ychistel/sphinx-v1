@@ -1,0 +1,35 @@
+name: Build Sphinx Documentation
+
+on:
+  push:
+    branches:
+      - main  # Remplacez "main" par le nom de votre branche principale (ex : master)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x  # Remplacez "3.x" par la version de Python que vous utilisez dans votre projet
+
+    - name: Install dependencies
+      run: |
+        pip install -r docs/requirements.txt  # Si vous utilisez un fichier "requirements.txt" pour définir les dépendances
+
+    - name: Build Sphinx
+      run: |
+        cd source  # Assurez-vous que le chemin est correct pour accéder au répertoire "docs"
+        make html  # Exécutez la commande pour générer la documentation HTML avec Sphinx
+
+    - name: Publish HTML pages
+      uses: actions/upload-artifact@v2
+      with:
+        name: sphinx-html
+        path: build/html  # Indiquez le chemin vers le répertoire contenant les fichiers HTML générés
+
