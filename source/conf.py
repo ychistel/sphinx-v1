@@ -51,7 +51,7 @@ exclude_patterns = []
 # a list of builtin themes.
 #
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'sphinx_book_theme'
 #html_theme = 'classic'
 
 html_theme_options = {
