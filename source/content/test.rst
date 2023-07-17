@@ -8,7 +8,9 @@ Le code du fichier sphinx.yml
 
 On fait une petite modif pour voir si ça commit bien ! Encore un peu plus.
 
-Le dépôt est maintenant privé !
+Le dépôt est maintenant privé ! Mais ça ne marche pas...
+
+On protège la branche master
 
 .. code-block:: yaml
    
