@@ -7,14 +7,14 @@ Premier workflow
 Le code du fichier sphinx.yml
 
 .. code-block::
-    :language: yaml
+   :language: yaml
+   
+   name: Sphinx Documentation
 
-    name: Sphinx Documentation
-
-    on:
-    push:
-        branches:
-        - main
+   on:
+     push:
+       branches:
+       - main
 
     jobs:
     deploy:
