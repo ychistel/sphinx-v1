@@ -48,5 +48,8 @@ On fait une petite modif pour voir si ça commit bien !
             publish_branch: github-pages
             publish_dir: ./build
 
-Voila fin du fichier yaml
+Voila fin du fichier yaml.
+
+Toujours pas de mise à jour !!
+
 
